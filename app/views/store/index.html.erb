@@ -3,6 +3,7 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
+<%= pluralize(@count, 'count') %>
 
 <ul class="catalog">
   <% cache @products do %>

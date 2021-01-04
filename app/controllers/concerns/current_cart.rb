@@ -1,5 +1,4 @@
 module CurrentCart
-
   private
 
   def set_cart
@@ -9,4 +8,3 @@ module CurrentCart
     session[:cart_id] = @cart.id
   end
 end
-
