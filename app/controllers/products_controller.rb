@@ -74,6 +74,7 @@ class ProductsController < ApplicationController
     if stale?(@latest_order) #checks the args provided to determine whether the object was modified and needs to be regenerated
       respond_to do |format|
         format.atom
+        format.json { render @product.to_json(include: :orders) }
       end
     end
   end
